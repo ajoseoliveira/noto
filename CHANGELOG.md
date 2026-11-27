@@ -4,6 +4,10 @@ Aqui ficam as mudanças de cada versão que você pode notar ao usar o Noto, da 
 
 Cada versão é um título no formato `## [X.Y.Z] — AAAA-MM-DD`. Uma versão que ainda não foi publicada leva `não publicada` no lugar da data.
 
+## [0.2.1] — 2026-11-27
+
+- Nenhuma mudança para quem usa. Esta versão existe só para conferir que o aviso de atualização funciona.
+
 ## [0.2.0] — 2026-11-27
 
 - O Noto tem uma página para baixar o instalador, em português e em inglês.
