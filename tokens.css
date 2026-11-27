@@ -1,0 +1,117 @@
+/* Gerado por gerar.py a partir de tokens.json: não edite à mão. */
+:root {
+  color-scheme: light dark;
+  --cor-fundo: #F2F2F7;
+  --cor-superficie: #FFFFFF;
+  --cor-superficie2: #F2F2F7;
+  --cor-superficie3: #E5E5EA;
+  --cor-separador: #D1D1D6;
+  --cor-texto: #1D1D1F;
+  --cor-texto2: #6E6E73;
+  --cor-texto3: #A1A1A6;
+  --cor-acento: #0088FF;
+  --cor-acento-hover: #0077E6;
+  --cor-acento-texto: #0069D9;
+  --cor-acento-botao: #0069D9;
+  --cor-acento-botao-hover: #005CBF;
+  --cor-sucesso: #34C759;
+  --cor-perigo: #FF383C;
+  --cor-atencao: #FFCC00;
+  --cor-sucesso-texto: #1E7B34;
+  --cor-perigo-texto: #C9101F;
+  --cor-atencao-texto: #7A5A00;
+  --cor-laranja: #FF8D28;
+  --cor-roxo: #CB30E0;
+  --cor-ciano: #00C0E8;
+  --fonte-display: "Inter Display", "Segoe UI Variable Display", "SF Pro Display", -apple-system, system-ui, sans-serif;
+  --fonte-texto: Inter, "Segoe UI Variable Text", "SF Pro Text", -apple-system, system-ui, sans-serif;
+  --fonte-mono: "Cascadia Mono", "SF Mono", "JetBrains Mono", Consolas, monospace;
+  --texto-numero: 700 56px/60px var(--fonte-display);
+  --texto-titulo-grande: 700 30px/36px var(--fonte-display);
+  --texto-titulo1: 600 24px/30px var(--fonte-display);
+  --texto-titulo2: 600 20px/26px var(--fonte-display);
+  --texto-titulo3: 600 17px/22px var(--fonte-texto);
+  --texto-destaque: 600 14px/20px var(--fonte-texto);
+  --texto-corpo: 400 14px/20px var(--fonte-texto);
+  --texto-chamada: 400 13px/18px var(--fonte-texto);
+  --texto-subtitulo: 400 12px/16px var(--fonte-texto);
+  --texto-rodape: 400 12px/16px var(--fonte-texto);
+  --texto-legenda: 500 11px/14px var(--fonte-texto);
+  --espaco-1: 4px;
+  --espaco-2: 8px;
+  --espaco-3: 12px;
+  --espaco-4: 16px;
+  --espaco-5: 20px;
+  --espaco-6: 24px;
+  --espaco-8: 32px;
+  --espaco-10: 40px;
+  --espaco-12: 48px;
+  --raio-xs: 6px;
+  --raio-sm: 8px;
+  --raio-md: 10px;
+  --raio-lg: 14px;
+  --raio-xl: 20px;
+  --raio-pilula: 999px;
+  --controle-altura-sm: 28px;
+  --controle-altura-md: 32px;
+  --controle-altura-lg: 40px;
+  --controle-alvo-minimo: 28px;
+  --dur-rapido: 150ms;
+  --dur-padrao: 250ms;
+  --dur-lento: 350ms;
+  --curva: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --sombra: 0 1px 2px rgba(0,0,0,.06), 0 4px 16px rgba(0,0,0,.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+     --cor-fundo: #0F0F11;
+     --cor-superficie: #1C1C1E;
+     --cor-superficie2: #2C2C2E;
+     --cor-superficie3: #3A3A3C;
+     --cor-separador: #38383A;
+     --cor-texto: #F5F5F7;
+     --cor-texto2: #A1A1A6;
+     --cor-texto3: #6E6E73;
+     --cor-acento: #0091FF;
+     --cor-acento-hover: #2AA0FF;
+     --cor-acento-texto: #2AA0FF;
+     --cor-acento-botao: #0A6CD6;
+     --cor-acento-botao-hover: #1A7BE6;
+     --cor-sucesso: #30D158;
+     --cor-perigo: #FF4245;
+     --cor-atencao: #FFD600;
+     --cor-sucesso-texto: #30D158;
+     --cor-perigo-texto: #FF6B6E;
+     --cor-atencao-texto: #FFD600;
+     --cor-laranja: #FF9230;
+     --cor-roxo: #DB34F2;
+     --cor-ciano: #3CD3FE;
+     --sombra: none;
+  }
+}
+:root[data-tema="escuro"] {
+  --cor-fundo: #0F0F11;
+  --cor-superficie: #1C1C1E;
+  --cor-superficie2: #2C2C2E;
+  --cor-superficie3: #3A3A3C;
+  --cor-separador: #38383A;
+  --cor-texto: #F5F5F7;
+  --cor-texto2: #A1A1A6;
+  --cor-texto3: #6E6E73;
+  --cor-acento: #0091FF;
+  --cor-acento-hover: #2AA0FF;
+  --cor-acento-texto: #2AA0FF;
+  --cor-acento-botao: #0A6CD6;
+  --cor-acento-botao-hover: #1A7BE6;
+  --cor-sucesso: #30D158;
+  --cor-perigo: #FF4245;
+  --cor-atencao: #FFD600;
+  --cor-sucesso-texto: #30D158;
+  --cor-perigo-texto: #FF6B6E;
+  --cor-atencao-texto: #FFD600;
+  --cor-laranja: #FF9230;
+  --cor-roxo: #DB34F2;
+  --cor-ciano: #3CD3FE;
+  --sombra: none;
+}
+@media (prefers-reduced-motion: reduce) { :root { --dur-rapido: 0ms; --dur-padrao: 0ms; --dur-lento: 0ms; } }

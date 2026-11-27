@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Noto — baixar para Windows</title>
+<meta name="description" content="O Noto é um caderno de tarefas para Windows, com tudo salvo no seu computador. Baixe o instalador, veja o que o Windows vai mostrar e confira a soma de verificação.">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="icon" type="image/svg+xml" href="icon.svg">
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+<div class="pagina">
+
+<header class="cabecalho" data-secao="cabecalho">
+  <div class="marca">
+    <img src="icon.svg" width="64" height="64" alt="">
+    <h1>Noto</h1>
+  </div>
+  <p class="frase">Um caderno de tarefas para Windows. Tarefas, lembretes, metas, rotinas, agenda e notas num só lugar, com tudo salvo no seu computador.</p>
+</header>
+
+<section class="cartao cartao-baixar" id="baixar" data-secao="baixar" aria-labelledby="t-baixar">
+  <h2 class="so-leitor" id="t-baixar">Baixar</h2>
+  <a class="botao" href="https://github.com/ajoseoliveira/noto/releases/download/v0.2.0/Noto-Instalador-0.2.0.exe">Baixar para Windows</a>
+  <p class="versao">Versão 0.2.0 · 107 MB</p>
+  <p>Ao abrir o instalador, o Windows vai mostrar um aviso azul. É esperado: <a href="#windows">veja o que fazer</a>.</p>
+  <a class="link-alvo" href="https://github.com/ajoseoliveira/noto/releases/latest">Se o botão não funcionar, abra a página das versões</a>
+</section>
+
+<nav class="idioma" aria-label="Idioma">
+  <a class="link-alvo" href="en/" hreflang="en" lang="en">English</a>
+</nav>
+
+<section class="cartao" id="requisitos" data-secao="requisitos" aria-labelledby="t-requisitos">
+  <h2 id="t-requisitos">Requisitos</h2>
+  <ul class="linhas">
+    <li>Windows de 64 bits.</li>
+    <li>Instala só para o seu usuário, sem pedir administrador.</li>
+    <li>Não precisa de conta.</li>
+    <li>O Noto funciona sem internet.</li>
+  </ul>
+</section>
+
+<section class="cartao" id="windows" data-secao="windows" aria-labelledby="t-windows">
+  <h2 id="t-windows">O que o Windows vai mostrar</h2>
+  <p>Ao dar dois cliques no instalador, aparece uma janela azul. Faça assim:</p>
+  <ol class="passos">
+    <li>Dê dois cliques no arquivo <strong class="tela arquivo">Noto-Instalador-0.2.0.exe</strong>.</li>
+    <li>A janela azul diz <strong class="tela">O Windows protegeu o computador</strong>. Isso é esperado.</li>
+    <li>Clique em <strong class="tela">Mais informações</strong>.</li>
+    <li>Clique em <strong class="tela">Executar assim mesmo</strong>.</li>
+  </ol>
+  <p>Pronto. A instalação leva alguns segundos e não faz mais perguntas.</p>
+  <h3>Por que o aviso aparece?</h3>
+  <p>O Windows mostra esse aviso para todo programa que não tem uma assinatura paga de empresa. O Noto não tem essa assinatura. O aviso não quer dizer que o arquivo é perigoso: só diz que o Windows ainda não conhece o programa. Para ter certeza de que o arquivo é o que foi publicado, use a soma de verificação abaixo.</p>
+  <h3>Se o navegador avisar ao baixar</h3>
+  <p>Ao baixar, o Chrome ou o Edge podem avisar que o arquivo não é baixado com frequência. É normal para um programa novo: clique nos três pontinhos ao lado do aviso e em <strong class="tela">Manter</strong>. Se aparecer outra pergunta, clique em <strong class="tela">Manter assim mesmo</strong>.</p>
+</section>
+
+<section class="cartao" id="verificar" data-secao="verificar" aria-labelledby="t-verificar">
+  <h2 id="t-verificar">Soma de verificação</h2>
+  <p>Quer ter certeza de que o arquivo é o que foi publicado? No PowerShell, na pasta Downloads, rode:</p>
+  <pre class="codigo"><code>Get-FileHash .\Noto-Instalador-0.2.0.exe -Algorithm SHA256</code></pre>
+  <p>O resultado tem de ser igual a esta soma (SHA-256):</p>
+  <p class="codigo soma"><code>74f1a980b4dccdb833a70e0d4f0ec02641dac71c0bce03ceb1be66091791be3d</code></p>
+</section>
+
+<section class="cartao" id="ja-instalou" data-secao="ja-instalou" aria-labelledby="t-ja-instalou">
+  <h2 id="t-ja-instalou">Se você já instalou o Noto</h2>
+  <p>Se você instalou o Noto antes, baixe esta versão uma vez; daqui em diante o Noto avisa quando houver versão nova.</p>
+  <p>Para atualizar à mão, basta baixar o instalador novo e dar dois cliques. Não precisa desinstalar a versão antiga.</p>
+</section>
+
+<footer class="rodape" data-secao="rodape">
+  <p class="concessao">Você pode baixar e usar o Noto de graça. Não pode copiar, modificar, revender nem redistribuir o app ou o código.</p>
+  <p class="direitos">Todos os direitos reservados.</p>
+  <ul class="links">
+    <li><a class="link-alvo" href="https://github.com/ajoseoliveira/noto/blob/main/LICENSE">Licença</a></li>
+    <li><a class="link-alvo" href="https://github.com/ajoseoliveira">Publicado por ajoseoliveira</a></li>
+    <li><a class="link-alvo" href="fonts/Inter-LICENSE.txt">Aviso da fonte Inter</a></li>
+    <li><a class="link-alvo" href="https://github.com/ajoseoliveira/noto/issues">Relatar um problema</a></li>
+  </ul>
+</footer>
+
+</div>
+</body>
+</html>

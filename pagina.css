@@ -1,0 +1,241 @@
+/* Página de download do Noto.
+   Cores, tipografia, espaços, raios e controles vêm só de tokens.css (cópia sem edição de src/tokens.css).
+   Tema claro e escuro automáticos, pelo prefers-color-scheme que o tokens.css já traz. Sem script, sem movimento. */
+
+@font-face { font-family: Inter; src: url('fonts/Inter-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: Inter; src: url('fonts/Inter-SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Inter Display'; src: url('fonts/InterDisplay-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+
+:root {
+  /* Texto sobre --cor-acento-botao: branco, como manda o design system (não há token para isso; o app faz o mesmo). */
+  --pagina-texto-sobre-botao: white;
+  --pagina-largura: 640px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font: var(--texto-corpo);
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+.so-leitor {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Coluna única. A ordem do DOM é a do Tab (o botão vem primeiro); o idioma sobe para o topo só na tela (order). */
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-4);
+  width: 100%;
+  max-width: var(--pagina-largura);
+  margin: 0 auto;
+  padding: var(--espaco-4) var(--espaco-4) var(--espaco-12);
+}
+
+.idioma {
+  order: -1;
+  align-self: flex-end;
+}
+
+/* Links ---------------------------------------------------------------- */
+
+a {
+  color: var(--cor-acento-texto);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+a:hover { text-decoration-thickness: 2px; }
+
+a:focus-visible {
+  outline: 3px solid var(--cor-acento);
+  outline-offset: 2px;
+  border-radius: var(--raio-xs);
+}
+
+/* Link fora de parágrafo: alvo de pelo menos 28 px. */
+.link-alvo {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--controle-alvo-minimo);
+}
+
+/* Cabeçalho ------------------------------------------------------------ */
+
+.cabecalho { padding: var(--espaco-4) 0 var(--espaco-2); }
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: var(--espaco-4);
+}
+
+h1 {
+  margin: 0;
+  font: var(--texto-titulo-grande);
+  color: var(--cor-texto);
+}
+
+.frase {
+  margin: var(--espaco-4) 0 0;
+  font: var(--texto-titulo3);
+  font-weight: 400;
+  color: var(--cor-texto);
+}
+
+/* Cartões -------------------------------------------------------------- */
+
+.cartao {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-separador);
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra);
+  padding: var(--espaco-5) var(--espaco-4);
+}
+
+h2 {
+  margin: 0 0 var(--espaco-3);
+  font: var(--texto-titulo3);
+  color: var(--cor-texto);
+}
+h2.so-leitor { margin: -1px; }
+
+h3 {
+  margin: var(--espaco-5) 0 var(--espaco-1);
+  font: var(--texto-destaque);
+  color: var(--cor-texto);
+}
+
+.cartao p { margin: 0 0 var(--espaco-3); }
+.cartao p:last-child { margin-bottom: 0; }
+
+/* O botão principal: o único elemento de acento azul da página. */
+.cartao-baixar { display: flex; flex-direction: column; align-items: flex-start; }
+
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  height: var(--controle-altura-lg);
+  padding: 0 var(--espaco-6);
+  background: var(--cor-acento-botao);
+  color: var(--pagina-texto-sobre-botao);
+  font: var(--texto-titulo3);
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--raio-sm);
+}
+/* Hover e pressionado: o rótulo ganha sublinhado nos dois temas. No claro o fundo também escurece
+   (token do design system, 6,4:1 com branco). No escuro o token de hover dá 4,18:1 e não é usado: o fundo não muda, por contraste. */
+.botao:hover, .botao:active { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+@media (prefers-color-scheme: light) {
+  .botao:hover, .botao:active { background: var(--cor-acento-botao-hover); }
+}
+.botao:focus-visible { border-radius: var(--raio-sm); }
+
+.cartao .versao {
+  margin: var(--espaco-2) 0 var(--espaco-4);
+  color: var(--cor-texto2);
+}
+
+.cartao-baixar .link-alvo { margin-top: var(--espaco-1); }
+
+/* Requisitos: lista agrupada (linhas separadas por 1 px). */
+.linhas { margin: 0; padding: 0; list-style: none; }
+.linhas li {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--espaco-2) 0;
+  border-top: 1px solid var(--cor-separador);
+}
+.linhas li:first-child { min-height: 0; padding-top: 0; border-top: 0; }
+.linhas li:first-child + li:last-child { min-height: 0; }
+.linhas li:last-child { min-height: 0; padding-bottom: 0; }
+
+/* Passos do aviso do Windows. */
+.passos { margin: 0 0 var(--espaco-3); padding-left: var(--espaco-6); }
+.passos li { padding-left: var(--espaco-1); margin-bottom: var(--espaco-2); }
+.passos li::marker { font-weight: 600; color: var(--cor-texto2); }
+
+/* O texto exato que aparece na tela do Windows (nunca só cor: negrito e fundo próprio). */
+.tela {
+  font-weight: 600;
+  padding: 1px var(--espaco-1);
+  background: var(--cor-superficie2);
+  border-radius: var(--raio-xs);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.arquivo { white-space: nowrap; }
+
+/* Comando e soma: quebram em vez de estourar a largura. */
+.codigo, .codigo code {
+  font-family: var(--fonte-mono);
+  font-size: 14px;
+  line-height: 20px;
+}
+pre.codigo {
+  margin: 0 0 var(--espaco-3);
+  padding: var(--espaco-3);
+  background: var(--cor-superficie2);
+  border-radius: var(--raio-sm);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+pre.codigo code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-all; }
+.cartao p.soma {
+  margin: 0;
+  padding: var(--espaco-3);
+  background: var(--cor-superficie2);
+  border-radius: var(--raio-sm);
+  overflow-wrap: anywhere;
+  word-break: break-all;
+}
+
+/* Rodapé --------------------------------------------------------------- */
+
+.rodape { padding: var(--espaco-2) 0 0; }
+.rodape p { margin: 0 0 var(--espaco-2); }
+.rodape .direitos { color: var(--cor-texto2); }
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-1) var(--espaco-4);
+  margin: var(--espaco-3) 0 0;
+  padding: 0;
+  list-style: none;
+}
+.links a {
+  font: var(--texto-rodape);
+  color: var(--cor-texto2);
+}
+.links a:hover { color: var(--cor-acento-texto); }
+
+@media (min-width: 640px) {
+  .pagina { padding-top: var(--espaco-8); }
+  .cartao { padding: var(--espaco-6); }
+  .botao { width: auto; min-width: 280px; }
+}

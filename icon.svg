@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="fundo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2A93FF"/>
+      <stop offset="1" stop-color="#0A5FC4"/>
+    </linearGradient>
+    <clipPath id="pagina"><rect x="268" y="176" width="532" height="672" rx="72"/></clipPath>
+  </defs>
+  <!-- placa -->
+  <rect x="32" y="32" width="960" height="960" rx="224" fill="url(#fundo)"/>
+  <!-- caderno -->
+  <rect x="268" y="176" width="532" height="672" rx="72" fill="#FFFFFF"/>
+  <rect x="268" y="176" width="96" height="672" fill="#E4EDF9" clip-path="url(#pagina)"/>
+  <!-- espiral -->
+  <g fill="#14233A">
+    <rect x="212" y="262" width="132" height="48" rx="24"/>
+    <rect x="212" y="410" width="132" height="48" rx="24"/>
+    <rect x="212" y="558" width="132" height="48" rx="24"/>
+    <rect x="212" y="706" width="132" height="48" rx="24"/>
+  </g>
+  <!-- linhas do caderno -->
+  <rect x="440" y="284" width="280" height="40" rx="20" fill="#C9D7EA"/>
+  <rect x="440" y="700" width="200" height="40" rx="20" fill="#C9D7EA"/>
+  <!-- marca de concluído -->
+  <path d="M452 520 L538 604 L712 418" fill="none" stroke="#0A6CD6" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
